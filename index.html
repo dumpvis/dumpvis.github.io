@@ -39,12 +39,16 @@
         <li>Displaying dumpsys log graphically in HTML with a built-in web server</li>
       </ul>
 
-      <p>Currently, visualization of the followings are supported:</p>
+      <p>Currently, visualization of the following log are supported:</p>
 
       <ul>
-        <li><code class="language-plaintext highlighter-rouge">dumpsys activity activities</code>: Android task stack
-        </li>
+        <li><code class="language-plaintext highlighter-rouge">dumpsys activity activities</code>: Android task stack</li>
         <li><code class="language-plaintext highlighter-rouge">dumpsys activity processes</code>: Process state</li>
+        <li><code class="language-plaintext highlighter-rouge">dumpsys cpuinfo</code>: CPU usage</li>
+        <li><code class="language-plaintext highlighter-rouge">cat /proc/cpuinfo</code>: CPU info</li>
+        <li><code class="language-plaintext highlighter-rouge">cat /proc/meminfo</code>: Memory info</li>
+        <li><code class="language-plaintext highlighter-rouge">df</code>: Disk usage</li>
+        <li><code class="language-plaintext highlighter-rouge">top</code>: CPU and memory usage by process</li>
       </ul>
 
       <div class="center mb-3">
@@ -56,11 +60,26 @@
       <h1 id="run">Run</h1>
 
       <p>
+        Make sure the device is connected:
+        <div class="bg-light p-2">
+          <code class="language-plaintext highlighter-rouge">
+            <div>$ adb devices</div>
+            <div>List of devices attached</div>
+            <div>80326a2d        device</div>
+          </code>
+        </div>
+      </p>
+
+      <p>
+        Run dumpvis in console:
         <div class="bg-light p-2">
           <code class="language-plaintext highlighter-rouge">
             <div>$ chmod a+x dumpvis</div>
             <div>$ ./dumpvis</div>
           </code>
+        </div>
+        <div class="mt-2">
+        The UI will be hosted in your default web browser at <a href="http://localhost:9527">http://localhost:9527</a>.
         </div>
       </p>
 
