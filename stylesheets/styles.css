@@ -71,6 +71,10 @@ code, pre {
   color:#333;
 }
 
+.bg-light {
+  background-color: #e0e0e0;
+}
+
 pre {
   padding:8px 15px;
   background: #f8f8f8;
@@ -272,6 +276,8 @@ div.center {
     color:#444;
   }
 }
+
+
 
 .m-0 {
   margin: 0 !important;
