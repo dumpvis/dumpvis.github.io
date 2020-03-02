@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <title>Dumpsys Visualizer</title>
+
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+  <meta name="viewport" content="width=device-width">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="center">
+        <h1><a href="https://dumpvis.github.io/">Dumpsys Visualizer</a></h1>
+        <hr>
+        <img class="mb-3" src="logo.png"></img>
+        <ul>
+          <li><a href="https://dumpvis.github.io/download/macos/dumpvis">Download <strong>MacOS</strong></a></li>
+          <li><a href="https://dumpvis.github.io/download/win64/dumpvis">Download <strong>Win x64</strong></a></li>
+          <li><a href="https://dumpvis.github.io/download/linux/dumpvis">Download <strong>Linux</strong></a></li>
+        </ul>
+      </div>
+    </header>
+    <section>
+
+      <h3>A tool for displaying android dumpsys log graphically in HTML.</h3>
+
+      <p><strong>Features</strong></p>
+
+      <ul>
+        <li>Parsing dumpsys log in proto format defined by official AOSP</li>
+        <li>Displaying dumpsys log graphically in HTML with a built-in web server</li>
+      </ul>
+
+      <p>Currently, visualization of the followings are supported:</p>
+
+      <ul>
+        <li><code class="language-plaintext highlighter-rouge">dumpsys activity activities</code>: Android task stack
+        </li>
+        <li><code class="language-plaintext highlighter-rouge">dumpsys activity processes</code>: Process state</li>
+      </ul>
+
+      <h1 id="support">Support</h1>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Android</th>
+            <th>Support</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pie - 9.0.0_r3</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td>Oreo - 8.1.0_r33</td>
+            <td>❌</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h1 id="next">Next</h1>
+
+      <ul>
+        <li>
+          <p><strong>Process dumpsys log more than <code
+                class="language-plaintext highlighter-rouge">dumpsys activity activities</code></strong></p>
+
+          <p>Actually, we can parse other dumpsys log easily, in that they are already supported by <a
+              href="https://dumpvis.github.io/proto/frameworks/base/core/proto/android/server/activitymanagerservice.proto">proto/frameworks/base/core/proto/android/server/activitymanagerservice.proto</a>
+          </p>
+
+          <p>The most part of work is to design the visualizer of other dumpsys log, such as <code
+              class="language-plaintext highlighter-rouge">dumpsys activity broadcasts</code>, <code
+              class="language-plaintext highlighter-rouge">dumpsys activity services</code> etc.</p>
+        </li>
+        <li>
+          <p><strong>Deep integration with manufacturers of smartphones</strong></p>
+
+          <p>More detailed log is depeneded on root permission and custom features by manufacturers of smartphones.</p>
+        </li>
+      </ul>
+    </section>
+    <footer>
+      <div class="center">
+        <p><small>Powered by <a href="mailto:duanqz@gmail.com">duanqz@gmail.com</a></small></p>
+      </div>
+    </footer>
+  </div>
+  <script src="javascripts/scale.fix.js"></script>
+</body>
+
+</html>
