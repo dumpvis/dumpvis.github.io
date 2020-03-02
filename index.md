@@ -1,6 +1,6 @@
 ## Dumpsys Visualizer
 
-A tool for displaying android dumpsys log graphically in HTML.**
+A tool for displaying android dumpsys log graphically in HTML.
 
 **Features**
 
