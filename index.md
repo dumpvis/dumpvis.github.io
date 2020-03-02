@@ -1,37 +1,32 @@
 ## Dumpsys Visualizer
 
-**`Dumpsys Visualizer` : A tool for displaying android dumpsys log graphically in HTML.**
+A tool for displaying android dumpsys log graphically in HTML.**
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+**Features**
 
-### Markdown
+- Parsing dumpsys log in proto format defined by official AOSP
+- Displaying dumpsys log graphically in HTML with a built-in web server
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Currently, visualization of the followings are supported:
 
-```markdown
-Syntax highlighted code block
+- `dumpsys activity activities`: Android task stack
+- `dumpsys activity processes`: Process state
 
-# Header 1
-## Header 2
-### Header 3
+# Support
 
-- Bulleted
-- List
+| Android          | Support |
+| ---              | ---     |
+| Pie - 9.0.0_r3   | ✅ |
+| Oreo - 8.1.0_r33 | ❌ |
 
-1. Numbered
-2. List
+# Next
 
-**Bold** and _Italic_ and `Code` text
+- **Process dumpsys log more than `dumpsys activity activities`**
 
-[Link](url) and ![Image](src)
-```
+    Actually, we can parse other dumpsys log easily, in that they are already supported by [proto/frameworks/base/core/proto/android/server/activitymanagerservice.proto](proto/frameworks/base/core/proto/android/server/activitymanagerservice.proto)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+    The most part of work is to design the visualizer of other dumpsys log, such as `dumpsys activity broadcasts`, `dumpsys activity services` etc.
 
-### Jekyll Themes
+- **Deep integration with manufacturers of smartphones**
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/dumpvis/dumpvis.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+    More detailed log is depeneded on root permission and custom features by manufacturers of smartphones.
