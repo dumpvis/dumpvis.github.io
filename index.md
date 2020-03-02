@@ -1,6 +1,6 @@
-## Welcome to GitHub Pages
+## Dumpsys Visualizer
 
-You can use the [editor on GitHub](https://github.com/dumpvis/dumpvis.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+**`Dumpsys Visualizer` : A tool for displaying android dumpsys log graphically in HTML.**
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
